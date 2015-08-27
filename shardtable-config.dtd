@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT shardingConfig (ignoreList?,parseList?,strategy*)>
+<!ELEMENT ignoreList (value+)>
+<!ELEMENT parseList (value+)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT golobal EMPTY>
+<!ATTLIST golobal
+        strategyClass CDATA
+        expression CDATA
+        >
+<!ELEMENT strategy EMPTY>
+<!ATTLIST strategy
+tableName CDATA #REQUIRED
+strategyClass CDATA
+expression CDATA
+        >
